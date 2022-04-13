@@ -10,6 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class ManagerSerializer(serializers.ModelSerializer):
+    u_name=serializers.ReadOnlyField(source="u_id.u_name")
     class Meta:
         model = Manager
-        fields = ("u_id", "m_tel")
+        fields = ("u_id", "m_tel", "u_name")
