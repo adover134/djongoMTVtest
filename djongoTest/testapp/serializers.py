@@ -12,4 +12,4 @@ class UserSerializer(serializers.ModelSerializer):
 class ManagerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Manager
-        fields = ["m_id", "u_id", "m_tel"]
+        fields = ("u_id", "m_tel")

@@ -12,8 +12,7 @@ class User(models.Model):
 
 
 class Manager(models.Model):
-    m_id = models.TextField(primary_key=True, default="")
-    u_id = models.ForeignKey(User, on_delete=models.CASCADE, db_column="u_id")
+    u_id = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, db_column="u_id")
     m_tel = models.TextField(default="010-0101-1010")
 
     class Meta:
